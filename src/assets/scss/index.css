@@ -1,0 +1,47 @@
+defaultInput {
+  background: var(--primary-white);
+  border: 2px solid rgba(84, 95, 125, 0.15);
+  border-radius: 5px;
+  padding: 15px 15px;
+}
+
+.default {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 8px;
+  padding: 15px 50px;
+  text-transform: uppercase;
+}
+.default:hover {
+  cursor: pointer;
+}
+
+.card {
+  background: #FFFFFF;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  height: 160px;
+  padding: 20px 25px;
+}
+.card h5 {
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--primary-darker-blue);
+  margin: 10px 0px 0px 0px;
+}
+.card p {
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: var(--primary-dark-blue);
+}/*# sourceMappingURL=index.css.map */
