@@ -1,14 +1,9 @@
 import { InputProps } from "../types/input";
 
-const Input = ({ type, style, value, name }: InputProps) => {
+const Input = ({ type, className, value, name }: InputProps) => {
   return (
     <>
-      <input
-        type={type}
-        className={"defaultInput" + style}
-        value={value}
-        name={name}
-      />
+      <input type={type} className={"input"} value={value} name={name} />
     </>
   );
 };

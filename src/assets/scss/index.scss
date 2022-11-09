@@ -1,3 +1,26 @@
-@import './input';
-@import './button';
-@import './card.scss'
+@import './variable';
+@import './commons/input';
+@import './commons/button';
+@import './commons/card';
+@import './pages/login';
+@import "./components/navbar";
+@import "./components/sidebar";
+@import "./components/scroll";
+
+@font-face {
+    font-family: 'AvenirNextRegular';
+    src: local('AvenirNextRegular'),
+         url('../fonts/AvenirNextLTPro-Regular.otf') format("opentype"),
+}
+
+@font-face {
+    font-family: 'AvenirNextBold';
+    src: local('AvenirNextBold'),
+         url('../fonts/AvenirNextLTPro-Bold.otf') format("opentype"),
+}
+
+@font-face {
+    font-family: 'AvenirNextLT';
+    src: local('AvenirNextLT'),
+         url('../fonts/AvenirNextLTPro-It.otf') format("opentype"),
+}

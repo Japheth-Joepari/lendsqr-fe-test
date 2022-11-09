@@ -1,11 +1,56 @@
-defaultInput {
+:root {
+  --primary-dark-blue: #213F7D;
+  --primary-darker-blue: #545F7D;
+  --primary-light-blue: #39CDCC;
+  --primary-white: #FFFFFF;
+  --dark-blue-with-opacity: rgba(33, 63, 125, 0.2);
+  --primary-dark-red: #E4033B;
+  --primary-light-green: #39CD62;
+  --primary-dark-yellow: #E9B200;
+}
+body{
+overflow-y: hidden;
+}
+
+.input {
   background: var(--primary-white);
   border: 2px solid rgba(84, 95, 125, 0.15);
   border-radius: 5px;
   padding: 15px 15px;
 }
 
-.default {
+.input::-moz-placeholder {
+  color: var(--primary-darker-blue);
+  font-weight: 400;
+  opacity: 0.6;
+  line-height: 19px;
+}
+
+.input:-ms-input-placeholder {
+  color: var(--primary-darker-blue);
+  font-weight: 400;
+  opacity: 0.6;
+  line-height: 19px;
+}
+
+.input::placeholder {
+  color: var(--primary-darker-blue);
+  font-weight: 400;
+  opacity: 0.6;
+  line-height: 19px;
+}
+
+.field-icon {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  right: 2rem;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.btn {
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -15,8 +60,58 @@ defaultInput {
   padding: 15px 50px;
   text-transform: uppercase;
 }
-.default:hover {
+.btn:hover {
   cursor: pointer;
+}
+
+.btn-green {
+  background-color: var(--primary-light-blue);
+  border: transparent;
+  color: var(--primary-white);
+}
+.btn-green:hover {
+  background-color: var(--primary-white);
+  color: var(--primary-light-blue);
+  border: 1px solid var(--primary-light-blue);
+}
+
+.btn-outline {
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 10px 20px;
+}
+
+.btn-outline-red {
+  background-color: var(--primary-white);
+  border: 1px solid var(--primary-dark-red);
+  color: var(--primary-dark-red);
+}
+.btn-outline-red:hover {
+  background-color: var(--primary-dark-red);
+  color: var(--primary-white);
+}
+
+.btn-outline-green {
+  background-color: var(--primary-white);
+  border: 1px solid var(--primary-light-blue);
+  color: var(--primary-light-blue);
+}
+.btn-outline-green:hover {
+  background-color: var(--primary-light-blue);
+  color: var(--primary-white);
+}
+
+.btn-outline-blue {
+  font-weight: 600;
+  line-height: 16px;
+  font-size: 14px;
+  background-color: var(--primary-white);
+  border: 1px solid var(--primary-dark-blue);
+  color: var(--primary-dark-blue);
+}
+.btn-outline-blue:hover {
+  background-color: var(--primary-dark-blue);
+  color: var(--primary-white);
 }
 
 .card {
@@ -44,4 +139,388 @@ defaultInput {
   line-height: 28px;
   text-transform: uppercase;
   color: var(--primary-dark-blue);
+}
+
+.login-container {
+  display: flex;
+  grid-template-columns: 50% 50%;
+  height: 100vh;
+  font-family: "AvenirNextRegular";
+  width: 100vw;
+}
+
+.login-first-half {
+  padding: 30px 20px;
+  margin: 20px 50px;
+  display: grid;
+}
+
+.login-img {
+  align-self: start;
+  justify-self: center;
+  margin-top: 2rem;
+}
+
+.logo {
+  margin-top: 2rem;
+  margin-left: 4.1rem;
+}
+
+.login-second-half {
+  background: #FFFFFF;
+  box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
+}
+
+.login-second-half .logo-container {
+  display: none;
+}
+
+.login-form-container {
+  margin: 25px 50px;
+  padding: 100px 50px;
+}
+.login-form-container h4 {
+  font-size: 40px;
+  margin-bottom: 0;
+  color: var(--primary-dark-blue);
+  font-weight: 700;
+  font-family: "AvenirNextBold";
+  letter-spacing: -0.04em;
+}
+.login-form-container p {
+  color: var(--primary-darker-blue);
+  font-size: 20px;
+  font-weight: 400;
+}
+.login-form-container a {
+  display: block;
+  color: var(--primary-light-blue);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  line-height: 16px;
+  text-align: left;
+}
+.login-form-container a:hover {
+  cursor: pointer;
+}
+
+.login-form {
+  margin-top: 60px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.email-input {
+  position: relative;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(84, 95, 125, 0.15);
+  border-radius: 5px;
+  width: 2rem;
+}
+
+.password-input-box {
+  position: relative;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(84, 95, 125, 0.15);
+  border-radius: 5px;
+}
+.password-input-box input {
+  border: transparent;
+  width: 100%;
+}
+.password-input-box input:focus {
+  border: transparent;
+}
+.password-input-box span {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  font-family: "AvenirNextBold";
+}
+
+.login-btn {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .login-container {
+    align-content: center;
+    margin: auto;
+  }
+  .login-first-half {
+    padding: 30px;
+    margin: auto;
+  }
+  .login-form-container {
+    margin: auto;
+  }
+  .login-form {
+    width: 95%;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .login-first-half {
+    display: none;
+  }
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+  }
+  .login-second-half .logo-container {
+    display: flex;
+    margin: 10px 20px;
+  }
+  .login-form-container {
+    padding: 15px;
+    margin: auto;
+  }
+  .login-form {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+.navbar {
+  height: 4vh;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+  padding: 35px 30px;
+  font-family: "AvenirNextRegular";
+  font-weight: 300;
+}
+.navbar .logo {
+  height: 30px;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+}
+.navbar-content .search-bar {
+  margin-left: 168.2px;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  width: 400px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--dark-blue-with-opacity);
+  border-radius: 8px;
+  border-right: 0px transparent;
+  position: relative;
+}
+.navbar-content .search-bar input {
+  border: transparent;
+  padding: 15px;
+  width: 100%;
+}
+.navbar-content .search-bar input:focus {
+  border: transparent;
+  border-right: 0px transparent;
+}
+.navbar-content .search-bar input::-moz-placeholder {
+  color: var(--primary-darker-blue);
+  opacity: 0.7;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.navbar-content .search-bar input:-ms-input-placeholder {
+  color: var(--primary-darker-blue);
+  opacity: 0.7;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.navbar-content .search-bar input::placeholder {
+  color: var(--primary-darker-blue);
+  opacity: 0.7;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.navbar-content .search-bar .search-icon {
+  background-color: var(--primary-light-blue);
+  padding: 10px;
+  width: 56px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0px 8px 8px 0px;
+  color: var(--primary-white);
+  text-align: center;
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 40px;
+  color: var(--primary-dark-blue);
+  align-items: center;
+  margin-left: auto;
+}
+.navbar-actions a {
+  text-decoration: underline;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--primary-dark-blue);
+  font-family: "Roboto", sans-serif;
+}
+.navbar-actions span {
+  color: var(--primary-dark-blue);
+  margin-right: 10px;
+}
+.navbar-actions .logged-in-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar-actions .logged-in-user .user-image {
+  border-radius: 50%;
+  margin-left: 23.16px;
+}
+.navbar-actions .logged-in-user p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.navbar-mobile {
+  display: none;
+}
+
+.navbar-mobile span {
+  color: var(--primary-dark-blue);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 25px 20px;
+    height: 80px;
+  }
+  .navbar-content {
+    display: none;
+  }
+  .navbar-mobile {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.sidebar {
+  background-color: var(--primary-white);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+  width: 283px;
+  overflow-y: scroll;
+  transition: all 0.5s;
+  --webkit-transition: all 0.25s;
+  width: 100vh;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 1px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--dark-blue-with-opacity);
+}
+
+/* Handle on hover */
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark-blue);
+}
+
+.sidebar-content {
+  font-family: "AvenirNextRegular";
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+}
+.sidebar-content a {
+  text-decoration: none;
+}
+
+.list-item {
+  align-items: center;
+  display: flex;
+  flex: 1 1 100%;
+  letter-spacing: normal;
+  min-height: 20px;
+  outline: none;
+  position: relative;
+  text-decoration: none;
+  gap: 10px;
+  color: var(--primary-dark-blue);
+  opacity: 0.7;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 20px 30px;
+}
+
+.list-item.org {
+  opacity: 1;
+}
+
+.list-item.active {
+  background: rgba(57, 205, 204, 0.06);
+  color: var(--primary-dark-blue);
+  border-left: 1px solid var(--primary-light-blue);
+  opacity: 1;
+}
+
+.subhead {
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--primary-dark-blue);
+  padding: 10px 30px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    display: none;
+    height: 100vh;
+  }
+  .sidebar.show {
+    display: block;
+  }
+}
+.scroll {
+  overflow-y: scroll;
+  height: 800px;
+}
+
+@font-face {
+  font-family: "AvenirNextRegular";
+  src: local("AvenirNextRegular"), url("../fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "AvenirNextBold";
+  src: local("AvenirNextBold"), url("../fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "AvenirNextLT";
+  src: local("AvenirNextLT"), url("../fonts/AvenirNextLTPro-It.otf") format("opentype");
 }/*# sourceMappingURL=index.css.map */

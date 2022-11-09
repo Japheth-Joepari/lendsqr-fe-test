@@ -1,16 +1,16 @@
-import Button from "./commons/Button";
-import Input from "./commons/Input";
-import Card from "./commons/Card";
-import "./assets/scss/index.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/dashboard/Dashboard";
+import Login from "./pages/login/Login";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Button type={"button"} text={"kmnjnhub"} />
-      <Input type={"text"} />
-      <Card></Card>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
